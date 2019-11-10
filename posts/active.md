@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Hackthebox Active
 
 Before we start I always reset the box, it is often that services have crashed or behaves in unintended ways after others have exploited them. And I do not want any spoilers that may have been left by others on the box.
