@@ -2,6 +2,8 @@
 layout: default
 ---
 
+![banner](https://github.com/Bengman/bengman.github.io/blob/master/banner.png?raw=true)
+
 # Hackthebox.eu
 
 *   [Active](./posts/active.html)
