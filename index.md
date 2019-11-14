@@ -7,6 +7,7 @@ layout: default
 # Hackthebox Writeups
 
 *   [Active](./posts/active.html) - Windows, GPP Passwords, Kerberoast
+*   [Access](./posts/access.html) - FTP, db, Empire, JAWS, Saved creds
 *   [Bank](./posts/bank.html) - File upload bypass, dns, suid, File permissions
 *   [Bashed](./posts/bashed.html) - sudo misconfig
 *   [Bastard](./posts/bastard.html) - Drupal, Empire, Sherlock, MS15-051 
