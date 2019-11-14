@@ -6,7 +6,7 @@ layout: default
 
 # Hackthebox.eu
 
-*   [Active](./posts/active.html)
+*   [Active](./posts/active.html) - Windows, GPP Passwords, Kerberoast
 *   [Bank](./posts/bank.html)
 *   [Bashed](./posts/bashed.html)
 *   [Bastard](./posts/bastard.html)
