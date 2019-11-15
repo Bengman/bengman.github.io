@@ -39,6 +39,10 @@ The problem with this box is that the web application is very slow. I dont reall
 ### Adobe ColdFusion - Directory Traversal
 
 So we could use the "Adobe ColdFusion - Directory Traversal" exploit to extract some hashes and from that a password. 
+
+```
+http://10.10.10.11:8500/CFIDE/administrator/enter.cfm?locale=../../../../../../../../../../ColdFusion8/lib/password.properties%00en
+```
 The hashes are SHA1 hashed. A simple search online and we find that the password for our hash is "happyday".
 
 ![cf_hash](../images/arctic_cf.png)
