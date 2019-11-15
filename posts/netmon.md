@@ -71,6 +71,8 @@ So we have an authenticated RCE that seems promesing. The only thing we need is 
 
 A quick Goole search suggests that there should be some data file at %programdata%\Paessler\PRTG Network Monitor.
 
+![netmon](../images/netmon_prtg.png)
+
 Looking in the C:\ProgramData\paessler\PRTG Network Monitor\ folder we see some interesting files.
 
 ```
@@ -108,11 +110,14 @@ So what if we try to change the password to PrTg@dmin2019, maybe the admin was l
 
 That is the solution but it required some guesswork from our side. 
 
+![netmon_admin](../images/netmon_admin.png)
 
 ## Privilege Escalation
 
 So now we could try that exploit that we found. We will need to grab the cookies of our administrative session in the application.
 
+![netmon](../images/netmon_exploit.png)
 
 So the exploit has created an admin user for us. Now we can simply use psexec or something similar to login
 
+![netmon](../images/netmon_psexec.png)
