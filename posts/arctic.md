@@ -27,6 +27,9 @@ Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
 
 At port 8500 we find a Cold Fusion install. We can clearly see that it is a Adobe Cold Fusion 8 version and we have and administrative login at "http://10.10.10.11:8500/CFIDE/administrator/"
 
+Searching for exploits reveal a couple that we potentially could use
+
+![cf_hash](../images/arctic_list.png)
 
 
 ## Initial Compromise
@@ -37,6 +40,8 @@ The problem with this box is that the web application is very slow. I dont reall
 
 So we could use the "Adobe ColdFusion - Directory Traversal" exploit to extract some hashes and from that a password. 
 The hashes are SHA1 hashed. A simple search online and we find that the password for our hash is "happyday".
+
+![cf_hash](../images/arctic_cf.png)
 
 I was not able to use this password to log in so I went on to another exploit "ColdFusion 8.0.1 Arbitrary File Upload and Execute".
 
